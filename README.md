@@ -32,7 +32,7 @@ The site keeps all content and native navigation available without JavaScript. T
 
 ## Content updates
 
-The featured Printbiz Landing Pages collection credits Michael's design work on 24 WordPress and WooCommerce landing pages. All user-provided URLs are listed under Textile & embroidery; Sublimation; Signage; DTG, DTF & UV; Laser; and More equipment & supplies. The featured artwork comes from Threadworks and is not a screenshot of the collection. The three sample projects remain removed.
+The featured Printbiz Landing Pages collection credits Michael's design work on 24 WordPress landing pages. All user-provided URLs are listed under Textile & embroidery; Sublimation; Signage; DTG, DTF & UV; Laser; and More equipment & supplies. The featured artwork comes from Threadworks and is not a screenshot of the collection. The three sample projects remain removed.
 
 Contact includes the supplied Facebook and LinkedIn profiles. Add other social profiles or email links only when the correct details are available; there is no simulated contact-form submission.
 
