@@ -98,37 +98,6 @@ if ("ResizeObserver" in window) {
   layoutObserver.observe(document.querySelector("main"));
 }
 
-// Filters are progressive enhancements: without JS, every project remains visible.
-const filterGroup = document.querySelector(".project-filters");
-const filterButtons = [...document.querySelectorAll("[data-filter]")];
-const projectCards = [...document.querySelectorAll("[data-category]")];
-const projectCount = document.querySelector("#project-count");
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    let count = 0;
-    for (const card of projectCards) {
-      card.hidden = filter !== "all" && card.dataset.category !== filter;
-      if (!card.hidden) count += 1;
-    }
-    for (const control of filterButtons) {
-      control.setAttribute("aria-pressed", String(control === button));
-    }
-    projectCount.textContent = filter === "all"
-      ? count + " projects & explorations"
-      : filter === "development"
-        ? count + " website" + (count === 1 ? "" : "s")
-        : count + " UI exploration" + (count === 1 ? "" : "s");
-    requestAnimationFrame(() => {
-      for (const card of projectCards) {
-        if (!card.hidden && card.getBoundingClientRect().top < innerHeight) revealWithin(card);
-      }
-      scheduleNavigationUpdate();
-    });
-  });
-});
-filterGroup.hidden = false;
-
 // Only off-screen content gets an entrance; anchor navigation and keyboard focus reveal it immediately.
 let revealObserver;
 function revealWithin(element) {
