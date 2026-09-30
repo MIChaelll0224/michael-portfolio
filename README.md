@@ -14,7 +14,7 @@ Open `index.html` directly in a browser, or serve this folder with a local stati
 - `#about`: introduction, full-color portrait, and toolkit.
 - `#process`: a three-step collaboration overview.
 - FAQ: answers to common questions, using native disclosure panels.
-- `#contact`: the existing Facebook profile and a clear starting point for a conversation.
+- `#contact`: Facebook and LinkedIn profiles, with a clear starting point for a conversation.
 
 The old `services.html`, `projects.html`, `about.html`, and `contacts.html` URLs redirect to their corresponding sections.
 
@@ -33,7 +33,7 @@ The site keeps all content and native navigation available without JavaScript. T
 
 The featured Printbiz Landing Pages collection credits Michael's design work on 24 WordPress and WooCommerce landing pages. All user-provided URLs are listed under Textile & embroidery; Sublimation; Signage; DTG, DTF & UV; Laser; and More equipment & supplies. The featured artwork comes from Threadworks and is not a screenshot of the collection. The three sample projects remain removed.
 
-Contact uses the existing Facebook profile. Add other social profiles or email links only when the correct details are available; there is no simulated contact-form submission.
+Contact includes the supplied Facebook and LinkedIn profiles. Add other social profiles or email links only when the correct details are available; there is no simulated contact-form submission.
 
 The existing portrait, `background-img.png`, is reused and cached by the browser. The About photo retains its natural colors with a modest CSS brightness adjustment. Images include dimensions, descriptive alternatives, and lazy loading where appropriate.
 
