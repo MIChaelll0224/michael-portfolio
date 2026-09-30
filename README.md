@@ -9,7 +9,7 @@ Open `index.html` directly in a browser, or serve this folder with a local stati
 ## Page structure
 
 - `#home`: introduction, portrait, and primary actions.
-- `#projects`: one featured Printbiz landing page, with a live link and expandable project details.
+- `#projects`: one featured Printbiz Landing Pages collection, with all 24 live links grouped into six categories and expandable project details.
 - `#services`: service descriptions and deliverables in native disclosure panels.
 - `#about`: introduction, full-color portrait, and toolkit.
 - `#process`: a three-step collaboration overview.
@@ -31,7 +31,7 @@ The site keeps all content and native navigation available without JavaScript. T
 
 ## Content updates
 
-The featured [Printbiz Landing Page](https://printbiz.ph/threadworks/) credits Michael's landing page design using WordPress and WooCommerce. Threadworks is the page's subject within the Printbiz website. Its preview uses artwork from that page, not a screenshot. Only this project is listed; the three sample projects have been removed.
+The featured Printbiz Landing Pages collection credits Michael's design work on 24 WordPress and WooCommerce landing pages. All user-provided URLs are listed under Textile & embroidery; Sublimation; Signage; DTG, DTF & UV; Laser; and More equipment & supplies. The featured artwork comes from Threadworks and is not a screenshot of the collection. The three sample projects remain removed.
 
 Contact uses the existing Facebook profile. Add other social profiles or email links only when the correct details are available; there is no simulated contact-form submission.
 

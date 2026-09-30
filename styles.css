@@ -207,6 +207,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .feature-list li { display: flex; align-items: center; gap: 9px; font-size: 12px; }
 .feature-list .icon { width: 14px; height: 14px; color: var(--accent); }
 .featured-copy > .text-link { margin-top: 17px; font-size: 12px; }
+.landing-pages { grid-column: 1 / -1; min-width: 0; padding: 32px 28px; border-top: 1px solid var(--line); }
+.landing-pages-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 25px; }
+.landing-pages-heading h4 { margin-top: 10px; font: 600 clamp(22px, 2.2vw, 29px)/1.25 var(--display); letter-spacing: -.035em; }
+.landing-pages-heading > p { color: var(--muted); font-size: 12px; }
+.landing-pages-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.landing-page-group { min-width: 0; }
+.landing-page-group h5 { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 0 10px; font: 600 14px/1.5 var(--display); }
+.landing-page-group h5 > span { color: var(--quiet); font: 400 10px var(--mono); }
+.landing-page-group li + li { border-top: 1px solid var(--line); }
+.landing-page-group a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 11px 8px; color: var(--muted); font-size: 13px; line-height: 1.5; border-radius: 4px; }
+.landing-page-group a:hover, .landing-page-group a:focus-visible { background: var(--accent-surface); color: var(--text); }
+.landing-page-group .icon { width: 15px; height: 15px; color: var(--accent); }
 .project-details { border-top: 1px solid var(--line); padding-inline: 28px; }
 .project-featured > .project-details { grid-column: 1 / -1; }
 .project-details summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 69px; list-style: none; cursor: pointer; font-size: 12px; font-weight: 550; }
@@ -369,6 +381,8 @@ summary:hover .expand-icon { border-color: var(--accent); }
   .faq-section { gap: 60px; }
 }
 @media (max-width: 900px) {
+  .landing-pages-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .landing-pages-heading { align-items: flex-start; flex-direction: column; gap: 14px; }
   .container { width: calc(100% - 56px); }
   .header-inner { min-height: 80px; }
   .header-cta { display: none; }
@@ -453,6 +467,8 @@ summary:hover .expand-icon { border-color: var(--accent); }
 }
 /* Phones */
 @media (max-width: 680px) {
+  .landing-pages { padding: 27px 23px; }
+  .landing-pages-grid { grid-template-columns: minmax(0, 1fr); }
   :root { --header-offset: 94px; }
   .container { width: calc(100% - 40px); }
   .header-inner { min-height: 76px; flex-wrap: wrap; gap: 10px; padding-block: 12px; }
@@ -592,6 +608,7 @@ summary:hover .expand-icon { border-color: var(--accent); }
   .footer-bottom > a { font-size: 10px; min-height: 35px; }
 }
 @media (max-width: 380px) {
+  .landing-pages { padding-inline: 20px; }
   .container { width: calc(100% - 36px); }
   .brand { gap: 8px; }
   .brand-name { font-size: 11px; }
@@ -628,6 +645,8 @@ summary:hover .expand-icon { border-color: var(--accent); }
   .footer-brand .brand-name { font-size: 10px; }
 }
 @media print {
+  .project-featured { display: block; }
+  .landing-page-group { break-inside: avoid; }
   :root, :root[data-theme], :root:not([data-theme]) { color-scheme: light; --bg: #fff; --surface: #fff; --card: #fff; --text: #172633; --muted: #3e5260; --quiet: #3e5260; --accent: #2b5f85; --accent-surface: #e1ecf4; --line: #b9c6d0; --button-bg: #fff; --button-text: #172633; }
   .site-header { position: static; }
   .theme-toggle, .menu-toggle, .reading-progress, .hero-bottom, .contact-graphic { display: none !important; }
@@ -635,5 +654,5 @@ summary:hover .expand-icon { border-color: var(--accent); }
   body { background: white; color: #172633; }
   .container { width: 100%; }
   .section { padding-block: 35px; }
-  .project-card, .service-item, .about-visual, .process-list > li { break-inside: avoid; }
+  .service-item, .about-visual, .process-list > li { break-inside: avoid; }
 }
