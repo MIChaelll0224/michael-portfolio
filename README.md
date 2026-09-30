@@ -1,34 +1,50 @@
-# Michael Angelo Munzon — Portfolio
+# Michael Angelo Munzon / Portfolio
 
-A responsive, single-page portfolio built with HTML, CSS, and vanilla JavaScript. No build step or dependencies are required.
+A responsive, single-page portfolio built with HTML, CSS, and vanilla JavaScript. No build step or dependencies.
 
 ## Preview
 
-Open `index.html` in a browser, or serve this folder with your preferred local static server.
+Open `index.html` directly in a browser, or serve this folder with a local static server.
 
-## Content and navigation
+## Page structure
 
-- All content lives in `index.html`: introduction, work (`#projects`), services (`#services`), about (`#about`), and contact (`#contact`).
-- Project details expand in place using native `details` / `summary` elements.
-- The old `services.html`, `projects.html`, `about.html`, and `contacts.html` URLs redirect to the matching sections, including without JavaScript.
-- `styles.css` controls the responsive layout, colors, and typography.
-- `script.js` handles the mobile menu, active navigation, anchor focus, and copyright year. Content and links still work with JavaScript disabled.
-- `favicon.svg` is the portfolio monogram.
-- `theme.js` selects light or dark mode before styles load, follows the device preference until a mode is chosen, and remembers that choice in local storage. The header toggle works on desktop and mobile; blocked storage does not prevent switching.
-- Both palettes use steel-blue accents. The About portrait keeps its natural colors, with a small CSS brightness adjustment.
+- `#home`: introduction, portrait, and primary actions.
+- `#projects`: one featured personal project and two clearly labeled UI concepts. Filters show all work, development, or UI explorations. Project details expand in place.
+- `#services`: service descriptions and deliverables in native disclosure panels.
+- `#about`: introduction, full-color portrait, and toolkit.
+- `#process`: a three-step collaboration overview.
+- FAQ: answers to common questions, using native disclosure panels.
+- `#contact`: the existing Facebook profile and a clear starting point for a conversation.
 
-## Updating the portfolio
+The old `services.html`, `projects.html`, `about.html`, and `contacts.html` URLs redirect to their corresponding sections.
 
-Use real project screenshots, descriptions, and URLs when they are available. The e-commerce and landing page cards are explicitly labeled as UI explorations; their HTML/CSS previews are illustrative concepts, not screenshots of launched client work.
+## Files
 
-The contact section uses the existing Facebook profile. To add email or other social profiles, replace or extend these links with verified contact details. There is no contact form backend or simulated message submission.
+- `index.html`: content, semantic structure, and illustrative project mockups.
+- `styles.css`: light and dark palettes, layout, responsive styles, and motion.
+- `script.js`: mobile navigation, active section tracking, reading progress, project filters, anchor focus, and optional entrance animations.
+- `theme.js`: applies the selected palette before the stylesheet loads. Follows the device preference until the visitor chooses a mode; remembers that choice where local storage is available.
+- `favicon.svg`: the portfolio monogram.
 
-The existing portrait (`background-img.png`) is used in the hero and about section. The unused legacy stylesheets and second image remain available but are not loaded.
+The site keeps all content and native navigation available without JavaScript. Filters and the theme toggle only appear when their behavior is ready. CSS still follows device color preferences without JavaScript.
 
-## Design and accessibility
+## Content updates
 
-Semantic sections, native anchor links, visible keyboard focus, a skip link, mobile menu controls with accessible names, responsive layouts, and reduced-motion support are included. The Google Fonts request uses `display=swap`; local font fallbacks keep the page readable if the request fails.
+The personal portfolio is the working project on this page. The e-commerce and landing-page examples are explicitly labeled as illustrative UI explorations, with no live store, checkout, or client results claimed. Replace their preview markup and descriptions with real screenshots and project links as work becomes available.
 
-Reference: [MDN anchor links](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a), [web.dev accessible responsive design](https://web.dev/articles/accessible-responsive-design), and [web.dev motion preferences](https://web.dev/learn/design/accessibility).
+Contact uses the existing Facebook profile. Add other social profiles or email links only when the correct details are available; there is no simulated contact-form submission.
 
-Deploy the folder to a static host when ready. No deployment is configured or performed by this redesign.
+The existing portrait, `background-img.png`, is reused and cached by the browser. The About photo retains its natural colors with a modest CSS brightness adjustment. Images include dimensions, descriptive alternatives, and lazy loading where appropriate.
+
+## Accessibility and interaction
+
+- Native section links and disclosures support direct links and keyboard navigation.
+- The mobile menu has accessible labels, Escape handling, and deliberate focus movement.
+- Theme choice survives reloads, handles unavailable storage, and updates browser chrome.
+- Project filters expose their selected state and announce the visible result count.
+- Reduced-motion preferences disable entrance animations and smooth scrolling.
+- Entrances only apply to off-screen content. Anchor navigation and keyboard focus reveal relevant content immediately.
+- Focus outlines apply to interactive controls rather than drawing a frame around a whole section.
+- Google Fonts use `display=swap`, with local fallback fonts.
+
+Host the folder on any static website service. The repository does not require a framework, package installation, or build pipeline.
