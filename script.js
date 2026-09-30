@@ -117,7 +117,7 @@ filterButtons.forEach((button) => {
     projectCount.textContent = filter === "all"
       ? count + " projects & explorations"
       : filter === "development"
-        ? count + " development project" + (count === 1 ? "" : "s")
+        ? count + " website" + (count === 1 ? "" : "s")
         : count + " UI exploration" + (count === 1 ? "" : "s");
     requestAnimationFrame(() => {
       for (const card of projectCards) {

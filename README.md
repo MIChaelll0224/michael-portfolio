@@ -9,7 +9,7 @@ Open `index.html` directly in a browser, or serve this folder with a local stati
 ## Page structure
 
 - `#home`: introduction, portrait, and primary actions.
-- `#projects`: one featured personal project and two clearly labeled UI concepts. Filters show all work, development, or UI explorations. Project details expand in place.
+- `#projects`: the Threadworks landing page, a personal portfolio, and two clearly labeled UI concepts. Filters show all work, websites, or UI explorations. Project details expand in place.
 - `#services`: service descriptions and deliverables in native disclosure panels.
 - `#about`: introduction, full-color portrait, and toolkit.
 - `#process`: a three-step collaboration overview.
@@ -25,12 +25,13 @@ The old `services.html`, `projects.html`, `about.html`, and `contacts.html` URLs
 - `script.js`: mobile navigation, active section tracking, reading progress, project filters, anchor focus, and optional entrance animations.
 - `theme.js`: applies the selected palette before the stylesheet loads. Follows the device preference until the visitor chooses a mode; remembers that choice where local storage is available.
 - `favicon.svg`: the portfolio monogram.
+- `assets/threadworks-hero.jpg`: artwork from the live Threadworks landing page, used in its project card (not a page screenshot).
 
 The site keeps all content and native navigation available without JavaScript. Filters and the theme toggle only appear when their behavior is ready. CSS still follows device color preferences without JavaScript.
 
 ## Content updates
 
-The personal portfolio is the working project on this page. The e-commerce and landing-page examples are explicitly labeled as illustrative UI explorations, with no live store, checkout, or client results claimed. Replace their preview markup and descriptions with real screenshots and project links as work becomes available.
+The featured [Threadworks project](https://printbiz.ph/threadworks/) credits Michael's landing page design using WordPress and WooCommerce within the Printbiz website. Its preview uses the landing page's artwork. The personal portfolio is also a working project. The e-commerce and product landing-page concepts are explicitly labeled as illustrative UI explorations, with no live store, checkout, or client results claimed.
 
 Contact uses the existing Facebook profile. Add other social profiles or email links only when the correct details are available; there is no simulated contact-form submission.
 
