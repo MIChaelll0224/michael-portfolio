@@ -181,7 +181,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .expertise-inner .icon { width: 19px; height: 19px; color: var(--accent); }
 .strip-divider { font: 300 19px var(--mono); color: var(--quiet); }
 /* Featured Printbiz landing page */
-.project-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+.project-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
 .project-card { min-width: 0; background: var(--card); border: 1px solid var(--line); border-radius: 13px; overflow: hidden; }
 .project-featured { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
 .project-art { position: relative; min-width: 0; display: flex; align-items: center; justify-content: center; padding: 48px 37px; }
@@ -235,6 +235,21 @@ summary:hover .expand-icon { border-color: var(--accent); }
 .case-study p { color: var(--muted); font-size: 13px; line-height: 1.85; }
 .section-endnote { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 29px; color: var(--muted); font-size: 12px; }
 .section-endnote .text-link { color: var(--text); }
+
+/* Printbiz Masterlist screenshot showcase */
+.art-masterlist { background: linear-gradient(140deg, #e5f6ff, #eaf0f7 65%, #fbe7f4); color: #304b61; }
+.masterlist-preview { display: block; width: 100%; border: 1px solid #bdd6e5; border-radius: 7px; overflow: hidden; box-shadow: 0 20px 40px #244c6b20; }
+.masterlist-preview img { width: 100%; height: auto; }
+.masterlist-gallery-intro { margin: 0 0 22px; color: var(--muted); font-size: 13px; }
+.masterlist-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding-bottom: 28px; }
+.masterlist-gallery figure { min-width: 0; }
+.masterlist-gallery a { display: block; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+.masterlist-gallery img { width: 100%; height: auto; }
+.masterlist-gallery figcaption { padding-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.masterlist-gallery figcaption strong { display: block; margin-bottom: 3px; color: var(--text); font-size: 14px; font-weight: 600; }
+@media (max-width: 680px) {
+  .masterlist-gallery { grid-template-columns: 1fr; }
+}
 
 /* Services */
 .services-section { background: var(--surface); border-block: 1px solid var(--line); }

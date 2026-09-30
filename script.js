@@ -53,9 +53,11 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const target = document.getElementById(link.hash.slice(1));
     if (!target) return;
     setMenu(false);
+    const focusTarget = target instanceof HTMLDetailsElement ? target.querySelector("summary") : target;
+    if (target instanceof HTMLDetailsElement) target.open = true;
     revealWithin(target);
     // Preserve native anchors, browser history, and deep links.
-    requestAnimationFrame(() => target.focus({ preventScroll: true }));
+    requestAnimationFrame(() => focusTarget.focus({ preventScroll: true }));
   });
 });
 
