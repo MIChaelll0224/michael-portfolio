@@ -237,6 +237,7 @@ summary:hover .expand-icon { border-color: var(--accent); }
 .section-endnote .text-link { color: var(--text); }
 
 /* Printbiz Masterlist screenshot showcase */
+.masterlist-languages li { color: var(--accent); background: var(--accent-surface); border-color: var(--accent-line); font-weight: 700; }
 .art-masterlist { background: linear-gradient(140deg, #e5f6ff, #eaf0f7 65%, #fbe7f4); color: #304b61; }
 .masterlist-preview { display: block; width: 100%; border: 1px solid #bdd6e5; border-radius: 7px; overflow: hidden; box-shadow: 0 20px 40px #244c6b20; }
 .masterlist-preview img { width: 100%; height: auto; }
