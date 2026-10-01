@@ -136,3 +136,87 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 updateHeaderOffset();
 updateNavigation();
 configureReveals();
+
+// Keep project screenshots in a bounded, keyboard-accessible project dialog.
+const masterlistDialog = document.querySelector("#masterlist-project-dialog");
+const masterlistScreens = [...document.querySelectorAll(".masterlist-gallery figure")];
+const masterlistTriggers = [...document.querySelectorAll(".masterlist-preview, .masterlist-gallery a")];
+const masterlistImage = document.querySelector("#masterlist-dialog-image");
+let masterlistOpener;
+
+const masterlistScreenDetails = {
+  "overview.png": {
+    purpose: "Give the team a quick view of the catalog and the items that need attention before rollout.",
+    features: ["Catalog totals and product mix", "Product group summaries", "Team rollout checks"]
+  },
+  "products.png": {
+    purpose: "Help the team find and compare products in the catalog using the details relevant to their work.",
+    features: ["Product search and category tabs", "Filters for format, brand, owner, status, and data checks", "Prices and stock status in the results"]
+  },
+  "product-record.png": {
+    purpose: "Review a product's operational details in one record while keeping the catalog in view.",
+    features: ["Product details in a side panel", "Minimum order quantities, pricing, and stock", "Old SKU references and source tabs"]
+  },
+  "new-product.png": {
+    purpose: "Create new catalog records through a consistent product entry form.",
+    features: ["Brand, format, and product type fields", "Pricing and minimum order quantity levels", "Automatic SKU generation"]
+  },
+  "inventory.png": {
+    purpose: "Track how stock changes over time and trace movements back to their operational records.",
+    features: ["Opening inventory counts", "Receipts, sales, returns, and adjustments", "Movement dates, locations, and references"]
+  },
+  "data-checks.png": {
+    purpose: "Identify catalog records that need review so the team can focus on incomplete or conflicting data.",
+    features: ["Duplicate legacy code checks", "Missing price and cost flags", "Product classification review queues"]
+  },
+  "reports.png": {
+    purpose: "Prepare catalog and inventory outputs for sales, internal reviews, and record keeping.",
+    features: ["Sales price lists and internal masterlist exports", "Source reconciliation and count sheets", "Database backups"]
+  }
+};
+
+function showMasterlistScreen(index) {
+  const screen = masterlistScreens[index];
+  const source = screen.querySelector("img");
+  const details = masterlistScreenDetails[source.getAttribute("src").split("/").pop()];
+  masterlistImage.src = source.src;
+  masterlistImage.alt = source.alt;
+  document.querySelector("#masterlist-screen-title").textContent = screen.querySelector("strong").textContent.replace(/^\d+ \/ /, "");
+  document.querySelector("#masterlist-screen-purpose").textContent = details.purpose;
+  document.querySelector("#masterlist-screen-features").replaceChildren(...details.features.map((feature) => {
+    const item = document.createElement("li");
+    item.textContent = feature;
+    return item;
+  }));
+}
+
+masterlistTriggers.forEach((trigger) => {
+  trigger.setAttribute("aria-haspopup", "dialog");
+  trigger.setAttribute("aria-controls", masterlistDialog.id);
+  // Capture before the page's anchor handler so opening a preview never scrolls the page.
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    masterlistOpener = trigger;
+    const index = masterlistScreens.indexOf(trigger.closest("figure"));
+    showMasterlistScreen(Math.max(0, index));
+    root.classList.add("masterlist-dialog-open");
+    masterlistDialog.showModal();
+    masterlistDialog.scrollTop = 0;
+  }, { capture: true });
+});
+
+masterlistDialog.querySelector(".masterlist-dialog-close").addEventListener("click", () => masterlistDialog.close());
+let masterlistBackdropPressed = false;
+function isMasterlistBackdrop(event) {
+  const bounds = masterlistDialog.getBoundingClientRect();
+  return event.target === masterlistDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom);
+}
+masterlistDialog.addEventListener("pointerdown", (event) => { masterlistBackdropPressed = isMasterlistBackdrop(event); });
+masterlistDialog.addEventListener("click", (event) => {
+  if (masterlistBackdropPressed && isMasterlistBackdrop(event)) masterlistDialog.close();
+  masterlistBackdropPressed = false;
+});
+masterlistDialog.addEventListener("close", () => {
+  root.classList.remove("masterlist-dialog-open");
+  masterlistOpener?.focus({ preventScroll: true });
+});

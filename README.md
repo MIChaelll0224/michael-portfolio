@@ -22,11 +22,11 @@ The old `services.html`, `projects.html`, `about.html`, and `contacts.html` URLs
 
 - `index.html`: content, semantic structure, and the Printbiz project feature.
 - `styles.css`: light and dark palettes, layout, responsive styles, and motion.
-- `script.js`: mobile navigation, active section tracking, reading progress, anchor focus, and optional entrance animations.
+- `script.js`: mobile navigation, active section tracking, reading progress, anchor focus, optional entrance animations, and the Masterlist project dialog.
 - `theme.js`: applies the selected palette before the stylesheet loads. Follows the device preference until the visitor chooses a mode; remembers that choice where local storage is available.
 - `favicon.svg`: the portfolio monogram.
 - `assets/threadworks-hero.jpg`: artwork from the live Threadworks landing page, used in its project card (not a page screenshot).
-- `assets/printbiz-masterlist/`: seven supplied screenshots covering the overview, products, product record, creation form, inventory, data checks, and reports. Full-size previews open in a new tab.
+- `assets/printbiz-masterlist/`: seven supplied screenshots covering the overview, products, product record, creation form, inventory, data checks, and reports. One overall Problem & Solution introduces the expanded project gallery. Clicking a screenshot opens a bounded dark dialog with that screen's title, Purpose & Key Features, plus the project technologies. Screenshots are selected from the inline gallery; there are no carousel controls in the popup. The close button, Escape, or backdrop dismiss the dialog and restore focus. Without JavaScript, screenshot links lead to the inline gallery.
 
 The site keeps all content and native navigation available without JavaScript. The theme toggle only appears when its behavior is ready. CSS still follows device color preferences without JavaScript.
 

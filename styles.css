@@ -248,6 +248,60 @@ summary:hover .expand-icon { border-color: var(--accent); }
 .masterlist-gallery img { width: 100%; height: auto; }
 .masterlist-gallery figcaption { padding-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .masterlist-gallery figcaption strong { display: block; margin-bottom: 3px; color: var(--text); font-size: 14px; font-weight: 600; }
+/* A contained dark preview for the selected screenshot and its features. */
+html.masterlist-dialog-open { overflow: hidden; }
+.masterlist-dialog {
+  color-scheme: dark;
+  --bg: #0b0d10;
+  --surface: #10161c;
+  --card: #141b22;
+  --text: #edf2f6;
+  --muted: #a2afb9;
+  --line: #28343f;
+  --accent: #8db6d6;
+  --accent-surface: #172838;
+  --accent-line: #344f65;
+  width: min(1000px, calc(100% - 40px));
+  max-width: none;
+  max-height: calc(100vh - 48px);
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 24px 90px #0005;
+  overscroll-behavior: contain;
+}
+.masterlist-dialog::backdrop { background: #121820b3; }
+.masterlist-dialog-toolbar { position: sticky; top: 14px; height: 0; z-index: 2; display: flex; justify-content: flex-end; padding-right: 14px; }
+.masterlist-dialog-close { display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--card); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; box-shadow: 0 3px 12px #0003; }
+.masterlist-dialog-preview { padding: 60px 36px 28px; background: var(--bg); }
+.masterlist-image-stage { display: flex; align-items: center; justify-content: center; height: clamp(180px, 34vw, 380px); }
+.masterlist-image-stage img { width: 100%; height: 100%; object-fit: contain; }
+.masterlist-dialog-close:hover { background: var(--accent-surface); }
+.masterlist-dialog-details { padding: 30px 36px 36px; background: var(--surface); border-top: 1px solid var(--line); }
+.masterlist-dialog-details h2 { font-size: clamp(24px, 3vw, 30px); line-height: 1.2; letter-spacing: -.035em; }
+.masterlist-dialog-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-top: 7px; color: var(--accent); font-size: 12px; }
+.masterlist-screen-title { margin-top: 24px; font-size: 18px; letter-spacing: -.02em; }
+.masterlist-tech-heading { margin-top: 24px; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+.masterlist-dialog-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.masterlist-dialog-tags li { padding: 3px 11px; border: 1px solid var(--accent-line); border-radius: 20px; background: var(--accent-surface); color: var(--accent); font-size: 11px; }
+.masterlist-case-study { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 26px; }
+.masterlist-case-study section { padding: 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.masterlist-case-study h4 { font-size: 15px; letter-spacing: -.02em; }
+.masterlist-case-study p { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.masterlist-project-story { margin: 0 0 24px; }
+.masterlist-screen-features { margin-top: 10px; padding-left: 18px; list-style: disc; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.masterlist-screen-features li + li { margin-top: 6px; }
+@media (max-width: 600px) {
+  .masterlist-dialog { width: calc(100% - 24px); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); border-radius: 12px; }
+  .masterlist-dialog-preview { padding: 58px 16px 18px; }
+  .masterlist-image-stage { height: clamp(150px, 46vw, 260px); }
+  .masterlist-dialog-details { padding: 24px 20px; }
+  .masterlist-case-study { grid-template-columns: 1fr; }
+}
 @media (max-width: 680px) {
   .masterlist-gallery { grid-template-columns: 1fr; }
 }
