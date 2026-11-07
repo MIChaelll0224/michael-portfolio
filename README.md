@@ -25,8 +25,10 @@ The old `services.html`, `projects.html`, `about.html`, and `contacts.html` URLs
 - `script.js`: mobile navigation, active section tracking, reading progress, anchor focus, optional entrance animations, and the Masterlist project dialog.
 - `theme.js`: applies the selected palette before the stylesheet loads. Follows the device preference until the visitor chooses a mode; remembers that choice where local storage is available.
 - `favicon.svg`: the portfolio monogram.
+- `assets/portrait.webp`: the portrait, used in the hero and About sections.
+- `assets/share-card.jpg`: 1200×630 social preview image.
 - `assets/threadworks-hero.jpg`: artwork from the live Threadworks landing page, used in its project card (not a page screenshot).
-- `assets/printbiz-masterlist/`: seven supplied screenshots covering the overview, products, product record, creation form, inventory, data checks, and reports. One overall Problem & Solution introduces the expanded project gallery. Clicking a screenshot opens a bounded dark dialog with that screen's title, Purpose & Key Features, plus the project technologies. Screenshots are selected from the inline gallery; there are no carousel controls in the popup. The close button, Escape, or backdrop dismiss the dialog and restore focus. Without JavaScript, screenshot links lead to the inline gallery.
+- `assets/printbiz-masterlist/`: seven supplied screenshots (WebP) covering the overview, products, product record, creation form, inventory, data checks, and reports. One overall Problem & Solution introduces the expanded project gallery. Clicking a screenshot opens a bounded dark dialog with that screen's title, Purpose & Key Features, plus the project technologies. Screenshots are selected from the inline gallery; there are no carousel controls in the popup. The close button, Escape, or backdrop dismiss the dialog and restore focus. Without JavaScript, screenshot links lead to the inline gallery.
 
 The site keeps all content and native navigation available without JavaScript. The theme toggle only appears when its behavior is ready. CSS still follows device color preferences without JavaScript.
 
@@ -36,7 +38,7 @@ The featured Printbiz Landing Pages collection credits Michael's design work on 
 
 Contact includes the supplied Facebook and LinkedIn profiles. Add other social profiles or email links only when the correct details are available; there is no simulated contact-form submission.
 
-The existing portrait, `background-img.png`, is reused and cached by the browser. The About photo retains its natural colors with a modest CSS brightness adjustment. Images include dimensions, descriptive alternatives, and lazy loading where appropriate.
+The portrait, `assets/portrait.webp`, is reused and cached by the browser. The About photo retains its natural colors with a modest CSS brightness adjustment. Images include dimensions, descriptive alternatives, and lazy loading where appropriate.
 
 ## Accessibility and interaction
 

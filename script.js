@@ -145,31 +145,31 @@ const masterlistImage = document.querySelector("#masterlist-dialog-image");
 let masterlistOpener;
 
 const masterlistScreenDetails = {
-  "overview.png": {
+  "overview.webp": {
     purpose: "Give the team a quick view of the catalog and the items that need attention before rollout.",
     features: ["Catalog totals and product mix", "Product group summaries", "Team rollout checks"]
   },
-  "products.png": {
+  "products.webp": {
     purpose: "Help the team find and compare products in the catalog using the details relevant to their work.",
     features: ["Product search and category tabs", "Filters for format, brand, owner, status, and data checks", "Prices and stock status in the results"]
   },
-  "product-record.png": {
+  "product-record.webp": {
     purpose: "Review a product's operational details in one record while keeping the catalog in view.",
     features: ["Product details in a side panel", "Minimum order quantities, pricing, and stock", "Old SKU references and source tabs"]
   },
-  "new-product.png": {
+  "new-product.webp": {
     purpose: "Create new catalog records through a consistent product entry form.",
     features: ["Brand, format, and product type fields", "Pricing and minimum order quantity levels", "Automatic SKU generation"]
   },
-  "inventory.png": {
+  "inventory.webp": {
     purpose: "Track how stock changes over time and trace movements back to their operational records.",
     features: ["Opening inventory counts", "Receipts, sales, returns, and adjustments", "Movement dates, locations, and references"]
   },
-  "data-checks.png": {
+  "data-checks.webp": {
     purpose: "Identify catalog records that need review so the team can focus on incomplete or conflicting data.",
     features: ["Duplicate legacy code checks", "Missing price and cost flags", "Product classification review queues"]
   },
-  "reports.png": {
+  "reports.webp": {
     purpose: "Prepare catalog and inventory outputs for sales, internal reviews, and record keeping.",
     features: ["Sales price lists and internal masterlist exports", "Source reconciliation and count sheets", "Database backups"]
   }
