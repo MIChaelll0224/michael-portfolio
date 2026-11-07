@@ -2,6 +2,8 @@
 
 A responsive, single-page portfolio built with HTML, CSS, and vanilla JavaScript. No build step or dependencies.
 
+Live site: https://michael-portfolio-xi.vercel.app (deployed by Vercel on every push to `main`).
+
 ## Preview
 
 Open `index.html` directly in a browser, or serve this folder with a local static server.
